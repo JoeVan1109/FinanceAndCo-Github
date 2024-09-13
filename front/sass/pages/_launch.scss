@@ -1,0 +1,22 @@
+.container-launch {
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $green;
+    .logo-black {
+        margin: 15px;
+    }
+
+    .title-launch {
+        font-family: "Poppins", sans-serif;
+        color: white;
+
+        font-weight: 600;
+        font-size: 40px;
+    }
+}
