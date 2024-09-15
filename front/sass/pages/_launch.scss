@@ -1,7 +1,7 @@
-.container {
+.container-launch {
     overflow: hidden;
 
-    .container-launch {
+    .container-launch-visible {
 
         position: absolute;
         left: 0; 
@@ -29,7 +29,7 @@
     
     }
 
-    .container-launch.deplace-gauche {
+    .container-launch-visible.deplace-gauche {
         transform: translateX(-100%);
     }
     

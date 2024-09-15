@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
-        const containerLaunch = document.querySelector('.container-launch');
+        const containerLaunch = document.querySelector('.container-launch-visible');
         const containerLaunchIdentify = document.querySelector('.container-launch-identify');
         
         if (containerLaunch && containerLaunchIdentify) {

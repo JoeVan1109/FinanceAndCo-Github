@@ -1,0 +1,27 @@
+.container-boarding {
+    .featured-wrapper {
+      overflow: hidden;
+      width: 100%;
+  
+      .featured-list {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 200%; // Pour deux éléments
+  
+        .caroussel-item {
+          flex: 0 0 50%; // Chaque élément prend 50% de la largeur
+          list-style-type: none;
+        }
+      }
+    }
+  
+    .next-boarding {
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }

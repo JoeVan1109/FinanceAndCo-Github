@@ -72,10 +72,33 @@ table {
   background-color: #00D09E;
 }
 
-.container {
+.container-boarding .featured-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.container-boarding .featured-wrapper .featured-list {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 200%;
+}
+.container-boarding .featured-wrapper .featured-list .caroussel-item {
+  flex: 0 0 50%;
+  list-style-type: none;
+}
+.container-boarding .next-boarding {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container-launch {
   overflow: hidden;
 }
-.container .container-launch {
+.container-launch .container-launch-visible {
   position: absolute;
   left: 0;
   top: 0;
@@ -88,19 +111,19 @@ table {
   background-color: #00D09E;
   transition: transform 0.5s ease-in-out;
 }
-.container .container-launch .logo-black {
+.container-launch .container-launch-visible .logo-black {
   margin: 15px;
 }
-.container .container-launch .title-launch {
+.container-launch .container-launch-visible .title-launch {
   font-family: "Poppins", sans-serif;
   color: white;
   font-weight: 600;
   font-size: 40px;
 }
-.container .container-launch.deplace-gauche {
+.container-launch .container-launch-visible.deplace-gauche {
   transform: translateX(-100%);
 }
-.container .container-launch-identify {
+.container-launch .container-launch-identify {
   position: absolute;
   right: -100%;
   top: 0;
@@ -112,22 +135,22 @@ table {
   align-items: center;
   transition: transform 0.5s ease-in-out;
 }
-.container .container-launch-identify .logo-green {
+.container-launch .container-launch-identify .logo-green {
   margin: 15px;
 }
-.container .container-launch-identify .title-launch {
+.container-launch .container-launch-identify .title-launch {
   font-family: "Poppins", sans-serif;
   color: #00D09E;
   font-weight: 600;
   font-size: 40px;
 }
-.container .container-launch-identify .text-launch {
+.container-launch .container-launch-identify .text-launch {
   width: 60%;
   margin: 10px 0 30px 0;
   font-family: "League Spartan", sans-serif;
   text-align: center;
 }
-.container .container-launch-identify.deplace-centre {
+.container-launch .container-launch-identify.deplace-centre {
   transform: translateX(-100%);
 }
 
