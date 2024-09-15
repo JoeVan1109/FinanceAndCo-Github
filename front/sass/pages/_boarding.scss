@@ -1,27 +1,143 @@
 .container-boarding {
-    .featured-wrapper {
-      overflow: hidden;
-      width: 100%;
-  
-      .featured-list {
-        display: flex;
-        transition: transform 0.5s ease;
-        width: 200%; // Pour deux éléments
-  
-        .caroussel-item {
-          flex: 0 0 50%; // Chaque élément prend 50% de la largeur
-          list-style-type: none;
+
+
+
+    height: 100vh;
+
+    color: $black;
+    background-color: $green;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+
+    .content-wrapper {
+        height: 100%;
+
+        .featured-wrapper {
+            overflow: hidden;
+            width: 100%;
+    
+    
+    
+            .featured-list {
+                display: flex;
+                transition: transform 0.5s ease;
+                width: 200%;
+    
+                .caroussel-item {
+                flex: 0 0 50%;
+                list-style-type: none;
+    
+                    .container-boarding-1 {
+    
+                        
+                        
+                        .title-boarding {
+    
+                            position: relative;
+                            
+                            height: 35vh;
+    
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+    
+                            text-align: center;
+    
+                            line-height: 40px;
+    
+    
+    
+                            padding: 0 90px 0 90px;
+                        }
+    
+                        .boarding-img-1 {
+    
+                            box-sizing: border-box;
+    
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+    
+                            background-color: white;
+    
+                            border-top-left-radius: 50px;
+                            border-top-right-radius: 50px;
+    
+                            padding: 90px 0 70px 0;
+                        }
+                    }
+                    .container-boarding-2 {
+    
+                        
+                        
+                        .title-boarding {
+    
+                            position: relative;
+                            
+                            height: 35vh;
+    
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+    
+                            text-align: center;
+    
+                            line-height: 40px;
+    
+    
+    
+                            padding: 0 90px 0 90px;
+                        }
+    
+                        .boarding-img-2 {
+    
+                            box-sizing: border-box;
+    
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+    
+                            background-color: white;
+    
+                            border-top-left-radius: 50px;
+                            border-top-right-radius: 50px;
+    
+                            padding: 90px 0 70px 0;
+                        }
+                    }
+                }
+            }
         }
-      }
+    
+        .boarding-footer {
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            width: 100%;
+            
+            padding: 40px;
+    
+            margin-top: -1px;
+    
+            background-color: white;
+            
+            box-sizing: border-box;
+    
+            .next-boarding {
+                text-align: center;
+                margin-top: 20px;
+                padding: 10px;
+                color: $black;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+        }
     }
-  
-    .next-boarding {
-      text-align: center;
-      margin-top: 20px;
-      padding: 10px;
-      background-color: #007bff;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-  }
+    
+}
