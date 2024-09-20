@@ -1,18 +1,14 @@
 {
-
   "name": "finance_and_co",
-  
   "version": "1.0.0",
-  
   "description": "",
-  
   "main": "index.js",
-  
   "scripts": {
-  "test": "echo \"error:no test specified\" && exit 1",
-  "sass": "sass --watch ./front/sass/main.scss:./front/css/style.css",
-  "build:sass": "sass ./front/sass/main.scss:./front/css/style.css",
-  "build": "npm run build:sass"
-}
-  
+    "test": "echo \"error:no test specified\" && exit 1",
+    "sass": "sass --watch ./front/sass/main.scss:./front/css/style.css",
+    "build": "sass ./front/sass/main.scss:./front/css/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.66.1"
   }
+}
