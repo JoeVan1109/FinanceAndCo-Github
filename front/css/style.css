@@ -210,7 +210,7 @@ body {
 }
 body .container-signup {
   box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
   font-family: "Poppins", sans-serif;
   background-color: #00D09E;
 }
@@ -227,53 +227,54 @@ body .container-signup .title-signup {
   font-size: 40px;
   padding: 0 90px 0 90px;
 }
-body .container-signup .content-form {
+body .container-signup .form-signup {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  min-height: 79vh;
   background-color: white;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  padding: 40px 0 0 0;
-}
-body .container-signup .content-form .form-signup {
   box-sizing: border-box;
-  width: 80%;
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
 }
-body .container-signup .content-form .form-signup .label-form {
+body .container-signup .form-signup .label-form {
+  width: 80%;
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   margin: 20px 0 10px 0;
 }
-body .container-signup .content-form .form-signup .input-signup {
+body .container-signup .form-signup .input-signup {
+  width: 80%;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   padding: 8px 0 8px 20px;
   border-radius: 15px;
   border: none;
   background-color: #DFF7E2;
 }
-body .container-signup .content-form .form-signup .term {
+body .container-signup .form-signup .term {
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 13px;
   margin-top: 25px;
+  padding: 0 10px 0 10px;
 }
-body .container-signup .content-form .form-signup .bloc-btn {
+body .container-signup .form-signup .bloc-btn {
   display: flex;
   justify-content: center;
   margin: 20px 0 0 0;
 }
-body .container-signup .content-form .login {
+body .container-signup .bloc-login {
+  height: 100%;
+  background-color: white;
+  padding-top: 20px;
+}
+body .container-signup .bloc-login .login {
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 13px;
 }
-body .container-signup .content-form .login .link-login {
+body .container-signup .bloc-login .login .link-login {
   text-decoration: none;
   color: #00D09E;
 }

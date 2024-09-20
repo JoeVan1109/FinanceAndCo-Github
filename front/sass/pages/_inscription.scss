@@ -6,7 +6,7 @@ body {
 
         box-sizing: border-box;
     
-        height: 100vh;
+        height: 100%;
 
         font-family: "Poppins", sans-serif;
 
@@ -32,87 +32,94 @@ body {
             padding: 0 90px 0 90px;
         }
 
-        .content-form {
+        .form-signup {
 
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-
-            min-height: 79vh;
 
             background-color: white;
 
             border-top-left-radius: 50px;
 
             border-top-right-radius: 50px;
-        
-            padding: 40px 0 0 0;
+
+            box-sizing: border-box;
+
+            width: 100%;
             
 
-            .form-signup {
-
-                box-sizing: border-box;
+            .label-form {
 
                 width: 80%;
-                height: 40vh;
 
-                display: flex;
-                flex-direction: column;
+                font-family: "Poppins", sans-serif;
+                font-size: 20px;
 
-                .label-form {
-
-                    font-family: "Poppins", sans-serif;
-                    font-size: 20px;
-
-                    margin: 20px 0 10px 0;
-                }
-
-                .input-signup {
-
-                    font-family: "Poppins", sans-serif;
-                    font-size: 20px;
-
-
-                    padding: 8px 0 8px 20px;
-
-                    border-radius: 15px;
-                    border: none;
-
-                    background-color: $grey;
-                }
-
-                .term {
-
-                    text-align: center;
-
-                    font-family: "Poppins", sans-serif;
-                    font-size: 13px;
-
-                    margin-top: 25px;
-                }
-
-                .bloc-btn {
-                    display: flex;
-                    justify-content: center;
-
-                    margin: 20px 0 0 0;
-                }
+                margin: 20px 0 10px 0;
             }
 
-            .login {
+            .input-signup {
+
+                width: 80%;
+
+                font-family: "Poppins", sans-serif;
+                font-size: 15px;
+
+
+                padding: 8px 0 8px 20px;
+
+                border-radius: 15px;
+                border: none;
+
+                background-color: $grey;
+            }
+
+            .term {
+
                 text-align: center;
 
                 font-family: "Poppins", sans-serif;
-
                 font-size: 13px;
 
+                margin-top: 25px;
+
+                padding: 0 10px 0 10px;
+            }
+
+            .bloc-btn {
+                display: flex;
+                justify-content: center;
+
+                margin: 20px 0 0 0;
+            }
+        }
+
+        .bloc-login {
+
+            height: 100%;
+
+            background-color: white;
+
+            padding-top: 20px;
+
+            .login {
+                text-align: center;
+    
+                font-family: "Poppins", sans-serif;
+    
+                font-size: 13px;
+    
+                
+    
                 .link-login {
                     text-decoration: none;
-
+    
                     color: $green;
                 }
             }
         }
+        
     }
 
 
