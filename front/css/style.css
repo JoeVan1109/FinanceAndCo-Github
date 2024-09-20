@@ -215,7 +215,7 @@ body .container-signup {
   background-color: #00D09E;
 }
 body .container-signup .title-signup {
-  height: 25vh;
+  height: 17vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,7 +231,7 @@ body .container-signup .content-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  min-height: 75vh;
+  min-height: 79vh;
   background-color: white;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
@@ -240,7 +240,7 @@ body .container-signup .content-form {
 body .container-signup .content-form .form-signup {
   box-sizing: border-box;
   width: 80%;
-  height: 50vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
 }
