@@ -20,8 +20,19 @@
     .link-signup {
         @include btn;
 
-        margin: 20px;
+        margin: 20px 0 70px 0;
 
         background-color: $green;
+    }
+}
+
+.container-signup {
+
+    .btn-signup {
+
+        @include btn;
+
+        background-color: $green;
+
     }
 }
