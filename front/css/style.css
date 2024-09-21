@@ -53,7 +53,7 @@ table {
 .container-jauges {
   display: flex;
   justify-content: center;
-  margin: 30px;
+  margin: 20px 30px 15px 30px;
   position: relative;
   width: 80%;
   height: 30px;
@@ -172,6 +172,78 @@ table {
   margin-top: 50px;
 }
 
+.container-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+.container-card .sous-card {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  font-size: 15px;
+  background-color: #00D09E;
+  margin: 20px 0 30px 0;
+  padding: 30px;
+  border-radius: 35px;
+}
+.container-card .sous-card .barre {
+  width: 0.1em;
+  height: 100px;
+  background-color: white;
+  margin: 0 20px 0 30px;
+}
+.container-card .sous-card .card-left {
+  display: flex;
+  flex-direction: column;
+}
+.container-card .sous-card .card-left .bloc-icone {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #0068FF;
+  border-radius: 50px;
+}
+.container-card .sous-card .card-left .card-text {
+  width: 70px;
+  text-align: center;
+}
+.container-card .sous-card .card-right {
+  display: flex;
+  flex-direction: column;
+}
+.container-card .sous-card .card-right .bloc-up {
+  display: flex;
+  flex-direction: row;
+}
+.container-card .sous-card .card-right .bloc-up .monnaie-img {
+  padding-right: 10px;
+}
+.container-card .sous-card .card-right .barre-horizontale {
+  width: 180px;
+  height: 0.1em;
+  background-color: white;
+  margin: 15px 20px 15px 0;
+}
+.container-card .sous-card .card-right .bloc-down {
+  display: flex;
+  flex-direction: row;
+}
+.container-card .sous-card .card-right .bloc-down .food-img {
+  padding-right: 10px;
+}
+.container-card .card-down {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 body {
   overflow: hidden;
 }
@@ -247,9 +319,14 @@ body .container-home .container-enter-out .barre {
 body .container-home .container-text-jauge {
   display: flex;
   justify-content: center;
+  padding: 0 0 30px 0;
 }
 body .container-home .container-text-jauge .check-icone {
   margin-right: 10px;
+}
+body .container-home .container-text-jauge .text-jauge {
+  color: #0E3E3E;
+  font-weight: 500;
 }
 
 html, body {
