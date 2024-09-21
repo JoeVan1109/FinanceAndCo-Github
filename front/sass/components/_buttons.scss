@@ -36,3 +36,16 @@
 
     }
 }
+
+.container-login {
+
+    .btn-login {
+
+        @include btn;
+
+        background-color: $green;
+
+        margin-top: 50px;
+
+    }
+}

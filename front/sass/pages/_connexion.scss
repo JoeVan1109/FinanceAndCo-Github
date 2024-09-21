@@ -1,0 +1,132 @@
+body {
+
+    overflow: hidden;
+
+    .container-login {
+
+        
+
+        box-sizing: border-box;
+    
+        height: 100%;
+
+        font-family: "Poppins", sans-serif;
+
+        background-color: $green;
+
+        .title-login {
+            height: 35vh;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            text-align: center;
+        
+            line-height: 40px;
+        
+            color: $black;
+
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-size: 40px;
+        
+            
+        }
+
+        .form-login {
+
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+
+            background-color: white;
+
+            border-top-left-radius: 50px;
+
+            border-top-right-radius: 50px;
+
+            box-sizing: border-box;
+
+            width: 100%;
+
+            padding: 80px 0 250px 0;
+            
+
+            .label-form {
+
+                
+
+                font-family: "Poppins", sans-serif;
+                font-size: 20px;
+
+                margin: 20px 0 10px 0;
+            }
+
+            .input-signup {
+
+                width: 80%;
+
+                font-family: "Poppins", sans-serif;
+                font-size: 15px;
+
+
+                padding: 8px 0 8px 20px;
+
+                border-radius: 15px;
+                border: none;
+
+                background-color: $grey;
+            }
+
+            .term {
+
+                text-align: center;
+
+                font-family: "Poppins", sans-serif;
+                font-size: 13px;
+
+                margin-top: 25px;
+
+                padding: 0 10px 0 10px;
+            }
+
+            .bloc-btn {
+                display: flex;
+                justify-content: center;
+
+                margin: 20px 0 0 0;
+            }
+        }
+
+        .bloc-login {
+
+            height: 100%;
+
+            background-color: white;
+
+            padding-top: 20px;
+
+            .login {
+                text-align: center;
+    
+                font-family: "Poppins", sans-serif;
+    
+                font-size: 13px;
+    
+                
+    
+                .link-login {
+                    text-decoration: none;
+    
+                    color: $green;
+                }
+            }
+        }
+        
+    }
+
+
+}
