@@ -5,6 +5,8 @@ body {
 
     .container-home {
 
+        width: 100%;
+
         height: 100%;
 
         padding: 40px 0 40px 0;
@@ -50,6 +52,71 @@ body {
 
                 border-radius: 50px;
 
+            }
+        }
+
+        .container-enter-out {
+
+            margin-top: 50px;
+
+            display: flex;
+            justify-content: space-around;
+
+
+            .container-enter {
+
+                
+
+                .total-balance {
+
+                    display: flex;
+
+                    margin-bottom: 15px;
+                    
+                    .enter-icone{
+                        width: 15px;
+                    }
+                    .enter-text{
+                        margin-left: 7px;
+                    }
+                }
+
+                .enter-nbr {
+
+                    font-size: 30px;
+                    font-weight: 600;
+                    color: white;
+                }
+            }
+
+            .container-out {
+
+                .total-expense {
+
+                    display: flex;
+                    
+                    margin-bottom: 15px;
+
+                    .out-icone{
+                        width: 15px;
+                    }
+                    .out-text{
+                        margin-left: 7px;
+                    }
+                }
+
+                .expense-nbr {
+
+                    font-size: 30px;
+                    font-weight: 600;
+                    color: $blue;
+                }
+            }
+
+            .barre {
+                width: 0.1em;
+                height: 60px;
+                background-color: white;
             }
         }
     }
