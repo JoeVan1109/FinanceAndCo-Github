@@ -257,6 +257,9 @@ table {
   height: 60px;
   margin: 10px;
   border-radius: 25px;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0.2s;
 }
 .container-card .card-down .green-active {
   background-color: #00D09E;
