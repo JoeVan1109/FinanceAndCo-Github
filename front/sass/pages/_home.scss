@@ -130,12 +130,14 @@ body {
 
             .bloc-flux-argent {
 
-                width: 90%;
+                padding: 20px;
 
                 display: flex;
+                flex-wrap: wrap;
                 flex-direction: row;
-                justify-content: center;
+                justify-content: space-around;
                 align-items: center;
+                align-content: center;
 
                 padding-top: 25px;
 
@@ -153,19 +155,43 @@ body {
 
                     border-radius: 20px;
 
+                    margin-right: 5px;
+
                     .icone-argent {
                         
-                        width: 35px;
-                        height: 35px;
+                        width: 25px;
+                        height: 25px;
+
+                        
                     }
                 }
 
                 .bloc-text {
                     font-size: 12px;
+                    font-weight: 600;
+
+                    padding-right: 10px;
+
+                    .date-depense {
+
+                        color: $blue;
+                    }
                 }
 
                 .detail {
-                    font-size: 12px;
+                    font-size: 15px;
+
+                    padding: 0 10px 0 10px ;
+
+                    border-left: 1px solid $green;
+                    border-right: 1px solid $green;
+                }
+
+                .nbr-argent {
+                    font-size: 15px;
+                    font-weight: 600;
+
+                    padding-left: 10px;
                 }
             }
         }

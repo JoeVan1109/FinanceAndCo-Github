@@ -359,11 +359,13 @@ body .container-home .container-flux-argent {
   background-color: white;
 }
 body .container-home .container-flux-argent .bloc-flux-argent {
-  width: 90%;
+  padding: 20px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  align-content: center;
   padding-top: 25px;
 }
 body .container-home .container-flux-argent .bloc-flux-argent .bloc-icone {
@@ -375,16 +377,30 @@ body .container-home .container-flux-argent .bloc-flux-argent .bloc-icone {
   height: 50px;
   background-color: #6DB6FE;
   border-radius: 20px;
+  margin-right: 5px;
 }
 body .container-home .container-flux-argent .bloc-flux-argent .bloc-icone .icone-argent {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
 }
 body .container-home .container-flux-argent .bloc-flux-argent .bloc-text {
   font-size: 12px;
+  font-weight: 600;
+  padding-right: 10px;
+}
+body .container-home .container-flux-argent .bloc-flux-argent .bloc-text .date-depense {
+  color: #0068FF;
 }
 body .container-home .container-flux-argent .bloc-flux-argent .detail {
-  font-size: 12px;
+  font-size: 15px;
+  padding: 0 10px 0 10px;
+  border-left: 1px solid #00D09E;
+  border-right: 1px solid #00D09E;
+}
+body .container-home .container-flux-argent .bloc-flux-argent .nbr-argent {
+  font-size: 15px;
+  font-weight: 600;
+  padding-left: 10px;
 }
 
 html, body {
