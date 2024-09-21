@@ -243,7 +243,25 @@ table {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+  background-color: #DFF7E2;
+  width: 90%;
+  height: 70px;
+  border-radius: 30px;
 }
+.container-card .card-down .sous-card-down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 60px;
+  margin: 10px;
+  border-radius: 25px;
+}
+.container-card .card-down .green-active {
+  background-color: #00D09E;
+}
+
 body .container-home {
   width: 100%;
   height: 100%;
