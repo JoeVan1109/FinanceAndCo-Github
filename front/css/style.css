@@ -93,6 +93,8 @@ table {
   margin: 0;
   font-style: italic;
   font-size: 15px;
+  font-weight: 600;
+  color: #0E3E3E;
 }
 
 .container-launch-identify .btn-launch {
@@ -241,6 +243,13 @@ body .container-home .container-enter-out .barre {
   width: 0.1em;
   height: 60px;
   background-color: white;
+}
+body .container-home .container-text-jauge {
+  display: flex;
+  justify-content: center;
+}
+body .container-home .container-text-jauge .check-icone {
+  margin-right: 10px;
 }
 
 html, body {
