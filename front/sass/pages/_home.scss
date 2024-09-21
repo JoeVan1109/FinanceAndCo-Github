@@ -1,0 +1,56 @@
+body {
+
+    overflow: hidden;
+
+
+    .container-home {
+
+        height: 100%;
+
+        padding: 40px 0 40px 0;
+
+        background-color: $green;
+
+        font-family: "Poppins", sans-serif;
+
+
+        header {
+
+            display: flex;
+            justify-content: space-around;
+
+            color: $dark-black;
+
+            .header-welcome {
+
+                .welcome-title{
+
+                    font-weight: 700;
+                    font-size: 25px;
+
+                    margin-bottom: 10px;   
+                }
+                .welcome-text{
+                    
+                    font-weight: 600;
+                }
+
+            }
+
+            .header-notif {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                background-color: $grey;
+
+                width: 35px;
+                height: 35px;
+
+                border-radius: 50px;
+
+            }
+        }
+    }
+}

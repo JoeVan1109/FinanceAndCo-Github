@@ -125,6 +125,38 @@ table {
   margin-top: 50px;
 }
 
+body {
+  overflow: hidden;
+}
+body .container-home {
+  height: 100%;
+  padding: 40px 0 40px 0;
+  background-color: #00D09E;
+  font-family: "Poppins", sans-serif;
+}
+body .container-home header {
+  display: flex;
+  justify-content: space-around;
+  color: #052224;
+}
+body .container-home header .header-welcome .welcome-title {
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+body .container-home header .header-welcome .welcome-text {
+  font-weight: 600;
+}
+body .container-home header .header-notif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DFF7E2;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+}
+
 html, body {
   height: 100%;
   margin: 0;
