@@ -197,7 +197,7 @@ table {
   width: 0.1em;
   height: 100px;
   background-color: white;
-  margin: 0 20px 0 30px;
+  margin: 0 20px 0 10px;
 }
 .container-card .sous-card .card-left {
   display: flex;
