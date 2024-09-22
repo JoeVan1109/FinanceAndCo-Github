@@ -20,3 +20,49 @@
 - JAVASCRIPT
 - NODE.JS
 - API REST
+
+FinanceAndCo-Github/
+│
+├── back/
+│   ├── app/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── data/
+│   │   ├── routers/
+│   │   │   └── accueil-router.js
+│   │   │   └── login-router.js 
+|   |   |── index-router.js
+|   |   |── database.js
+│   │   ├── error/
+│   │   │   ├── errorhandler.js
+│   │   │   └── httperror.js
+│   │   └── app.js
+│   ├── public/
+│   └── views/
+│   |    ├── index.ejs
+│   |    ├── 404.ejs
+│   |    └── error.ejs
+│   └── package.json
+│
+├── front/
+│   ├── assets/
+│   │── css/
+│   │   └── style.css
+│   ├── html/
+│   │   └── index.html
+|   |   └── autre-fichier.html
+│   └── views/
+│   |    ├── index.ejs
+│   |    ├── 404.ejs
+│   |    └── error.ejs
+|   |    └── autre-fichier.ejs
+│   └── package.json
+    └── vite.config.js
+│
+├── index.js
+├── package.json
+├── .env
+└── netlify.toml
+└──eslint.config-.js
+└──README.md
+└──.gitignore
