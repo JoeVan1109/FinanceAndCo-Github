@@ -1,29 +1,21 @@
-import { render } from 'ejs';
 import { Account } from '../models/index-model.js';
 
 export const loginController = {
 
-    renderLoginPage: (req, res) => {
-        res.render('login', {
-            title: 'Login',
-        });
-    },
-
     loginAccount: (req, res) => {
-        const { email, password } = req.body;
-        const account = await Account.findOne({ email });
-        if (account) {
-            if (account.password === password) {
-                res.redirect('/accueil');
-            } else {
-                res.redirect('/login');
+        try {
+
+            const { email, password } = req.body;
+            if (!email || !password) {
+                return res.status(400).json({ message: 'Les champs sont obligatoires' });
             }
-        } else {
-            res.redirect('/login');
+            if (email === Account.email && password === Account.password) {
+                res.status(200).json({ message: 'Connexion réussie' });
+                res.redirect('/home');
+            }
+
+        } catch (error) {
+            console.log(error);
         }
     }
-
-    renderRegisterPage: (req, res) => {
-        
-    },
 }
