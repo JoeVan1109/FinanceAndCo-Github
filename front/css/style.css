@@ -280,47 +280,50 @@ table {
 }
 
 .container-home .footer {
-  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   background-color: white;
+  z-index: 1000;
 }
 .container-home .footer .bloc-footer {
   display: flex;
   justify-content: space-around;
   padding: 20px;
   background-color: #DFF7E2;
-  border-radius: 50px;
+  border-radius: 50px 50px 0 0;
 }
 
 html, body {
-  overflow: auto !important;
+  overflow: scroll !important;
   height: auto !important;
 }
 html .container-home, body .container-home {
-  width: 100%;
+  position: relative;
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: #00D09E;
   font-family: "Poppins", sans-serif;
   padding: 40px 0 0 0;
-  flex: 1;
   overflow-y: auto;
 }
-html header, body header {
+html .container-home header, body .container-home header {
   display: flex;
   justify-content: space-around;
   color: #052224;
 }
-html header .header-welcome .welcome-title, body header .header-welcome .welcome-title {
+html .container-home header .header-welcome .welcome-title, body .container-home header .header-welcome .welcome-title {
   font-weight: 700;
   font-size: 25px;
   margin-bottom: 10px;
 }
-html header .header-welcome .welcome-text, body header .header-welcome .welcome-text {
+html .container-home header .header-welcome .welcome-text, body .container-home header .header-welcome .welcome-text {
   font-weight: 600;
 }
-html header .header-notif, body header .header-notif {
+html .container-home header .header-notif, body .container-home header .header-notif {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -329,54 +332,55 @@ html header .header-notif, body header .header-notif {
   height: 35px;
   border-radius: 50px;
 }
-html .container-enter-out, body .container-enter-out {
+html .container-home .container-enter-out, body .container-home .container-enter-out {
   margin-top: 30px;
   display: flex;
   justify-content: space-around;
 }
-html .container-enter-out .container-enter .total-balance, body .container-enter-out .container-enter .total-balance {
+html .container-home .container-enter-out .container-enter .total-balance, body .container-home .container-enter-out .container-enter .total-balance {
   display: flex;
   margin-bottom: 15px;
 }
-html .container-enter-out .container-enter .total-balance .enter-icone, body .container-enter-out .container-enter .total-balance .enter-icone {
+html .container-home .container-enter-out .container-enter .total-balance .enter-icone, body .container-home .container-enter-out .container-enter .total-balance .enter-icone {
   width: 15px;
 }
-html .container-enter-out .container-enter .total-balance .enter-text, body .container-enter-out .container-enter .total-balance .enter-text {
+html .container-home .container-enter-out .container-enter .total-balance .enter-text, body .container-home .container-enter-out .container-enter .total-balance .enter-text {
   margin-left: 7px;
   font-size: 15px;
 }
-html .container-enter-out .container-enter .enter-nbr, body .container-enter-out .container-enter .enter-nbr {
+html .container-home .container-enter-out .container-enter .enter-nbr, body .container-home .container-enter-out .container-enter .enter-nbr {
   font-size: 23px;
   font-weight: 600;
   color: white;
 }
-html .container-enter-out .container-out .total-expense, body .container-enter-out .container-out .total-expense {
+html .container-home .container-enter-out .container-out .total-expense, body .container-home .container-enter-out .container-out .total-expense {
   display: flex;
   margin-bottom: 15px;
 }
-html .container-enter-out .container-out .total-expense .out-icone, body .container-enter-out .container-out .total-expense .out-icone {
+html .container-home .container-enter-out .container-out .total-expense .out-icone, body .container-home .container-enter-out .container-out .total-expense .out-icone {
   width: 15px;
 }
-html .container-enter-out .container-out .total-expense .out-text, body .container-enter-out .container-out .total-expense .out-text {
+html .container-home .container-enter-out .container-out .total-expense .out-text, body .container-home .container-enter-out .container-out .total-expense .out-text {
   margin-left: 7px;
   font-size: 15px;
 }
-html .container-enter-out .container-out .expense-nbr, body .container-enter-out .container-out .expense-nbr {
+html .container-home .container-enter-out .container-out .expense-nbr, body .container-home .container-enter-out .container-out .expense-nbr {
   font-size: 23px;
   font-weight: 600;
   color: #0068FF;
 }
-html .container-enter-out .barre, body .container-enter-out .barre {
+html .container-home .container-enter-out .barre, body .container-home .container-enter-out .barre {
   width: 0.1em;
   height: 60px;
   background-color: white;
 }
-html .container-flux-argent, body .container-flux-argent {
+html .container-home .container-flux-argent, body .container-home .container-flux-argent {
   width: 100%;
   height: 100%;
+  padding-bottom: 80px;
   background-color: white;
 }
-html .container-flux-argent .bloc-flux-argent, body .container-flux-argent .bloc-flux-argent {
+html .container-home .container-flux-argent .bloc-flux-argent, body .container-home .container-flux-argent .bloc-flux-argent {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -386,7 +390,7 @@ html .container-flux-argent .bloc-flux-argent, body .container-flux-argent .bloc
   align-content: center;
   padding-top: 25px;
 }
-html .container-flux-argent .bloc-flux-argent .bloc-icone, body .container-flux-argent .bloc-flux-argent .bloc-icone {
+html .container-home .container-flux-argent .bloc-flux-argent .bloc-icone, body .container-home .container-flux-argent .bloc-flux-argent .bloc-icone {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -397,25 +401,25 @@ html .container-flux-argent .bloc-flux-argent .bloc-icone, body .container-flux-
   border-radius: 20px;
   margin-right: 5px;
 }
-html .container-flux-argent .bloc-flux-argent .bloc-icone .icone-argent, body .container-flux-argent .bloc-flux-argent .bloc-icone .icone-argent {
+html .container-home .container-flux-argent .bloc-flux-argent .bloc-icone .icone-argent, body .container-home .container-flux-argent .bloc-flux-argent .bloc-icone .icone-argent {
   width: 25px;
   height: 25px;
 }
-html .container-flux-argent .bloc-flux-argent .bloc-text, body .container-flux-argent .bloc-flux-argent .bloc-text {
+html .container-home .container-flux-argent .bloc-flux-argent .bloc-text, body .container-home .container-flux-argent .bloc-flux-argent .bloc-text {
   font-size: 12px;
   font-weight: 600;
   padding-right: 10px;
 }
-html .container-flux-argent .bloc-flux-argent .bloc-text .date-depense, body .container-flux-argent .bloc-flux-argent .bloc-text .date-depense {
+html .container-home .container-flux-argent .bloc-flux-argent .bloc-text .date-depense, body .container-home .container-flux-argent .bloc-flux-argent .bloc-text .date-depense {
   color: #0068FF;
 }
-html .container-flux-argent .bloc-flux-argent .detail, body .container-flux-argent .bloc-flux-argent .detail {
+html .container-home .container-flux-argent .bloc-flux-argent .detail, body .container-home .container-flux-argent .bloc-flux-argent .detail {
   font-size: 15px;
   padding: 0 10px 0 10px;
   border-left: 1px solid #00D09E;
   border-right: 1px solid #00D09E;
 }
-html .container-flux-argent .bloc-flux-argent .nbr-argent, body .container-flux-argent .bloc-flux-argent .nbr-argent {
+html .container-home .container-flux-argent .bloc-flux-argent .nbr-argent, body .container-home .container-flux-argent .bloc-flux-argent .nbr-argent {
   font-size: 15px;
   font-weight: 600;
   padding-left: 10px;

@@ -1,20 +1,19 @@
 html, body {
 
-    overflow: auto !important;
+    overflow: scroll !important;
     height: auto !important;
 
     .container-home {
-        width: 100%;
+
+        position: relative;
         min-height: 100vh;
+        width: 100%;
         display: flex;
         flex-direction: column;
         background-color: $green;
         font-family: "Poppins", sans-serif;
         padding: 40px 0 0 0;
-        flex: 1;
         overflow-y: auto;
-    }
-
 
         header {
 
@@ -127,6 +126,9 @@ html, body {
             width: 100%;
             height: 100%;
 
+            
+            padding-bottom: 80px; // Ajustez cette valeur en fonction de la hauteur de votre footer
+
             background-color: white;
 
             .bloc-flux-argent {
@@ -197,5 +199,9 @@ html, body {
             }
         }
 
+    }
+
+
+        
     }
 
