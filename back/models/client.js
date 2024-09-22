@@ -1,6 +1,6 @@
-import 'dotenv/config'; //require('dotenv').config()
-
 import { Sequelize } from 'sequelize'; // const { Sequelize } = require('sequelize');
+
+import 'dotenv/config'; //require('dotenv').config()
 
 const { 
     PGUSER: user,

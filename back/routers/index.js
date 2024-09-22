@@ -1,12 +1,11 @@
 import { Router } from 'express';
 import { errorHandler } from '../error/errorhandler.js';
 import { HttpError } from '../error/httperror.js';
-import { router as loginRouter } from './login.js';
-
+import { userController } from '../controllers/userController.js';
 
 export const router = Router();
 
-router.use('/login', loginRouter);
+router.get('/users', userController.getUser);
 
 
 router.use((req, res, next)=>{
