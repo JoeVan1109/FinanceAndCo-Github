@@ -1,6 +1,11 @@
--- Création de la base de données
-CREATE DATABASE budget_app;
-
+-- Suppression des tables existantes si elles existent
+DROP TABLE IF EXISTS user_settings;
+DROP TABLE IF EXISTS notifications;
+DROP TABLE IF EXISTS financial_goals;
+DROP TABLE IF EXISTS budgets;
+DROP TABLE IF EXISTS transactions;
+DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS users;
 
 -- Création de la table des utilisateurs
 CREATE TABLE users (
@@ -64,7 +69,7 @@ CREATE TABLE notifications (
 -- Création de la table des paramètres utilisateur
 CREATE TABLE user_settings (
     id SERIAL PRIMARY KEY,
-    user_id INTEGER REFERENCES users(id) UNIQUE,
+    setting_id INTEGER REFERENCES users(id) UNIQUE,
     theme VARCHAR(20) DEFAULT 'light',
     currency VARCHAR(3) DEFAULT 'USD',
     language VARCHAR(5) DEFAULT 'en-US'

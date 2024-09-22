@@ -21,6 +21,10 @@ Users.init({
             isEmail: true,  // Cela vérifie que c'est un format d'email valide
         }
     },
+    created_at: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
+    }
     }, {
     sequelize: client,
     tableName: 'users',

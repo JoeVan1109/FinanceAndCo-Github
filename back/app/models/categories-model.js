@@ -11,8 +11,12 @@ Categories.init({
         allowNull: false,
     },
     type: {
-        type: DataTypes.TEXT,
+        type: DataTypes.STRING(10),
         allowNull: false,
+        validate: {
+            isIn: [['income', 'expense']]
+        }
+    },
     }, {
     sequelize: client,
     tableName: 'users',
