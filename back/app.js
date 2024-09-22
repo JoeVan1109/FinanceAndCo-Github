@@ -2,6 +2,17 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import { router } from './routers/index.js';
+import dotenv from 'dotenv';
+dotenv.config();
+
+console.log('Variables d\'environnement du backend:', {
+    PORT: process.env.PORT,
+    PGUSER: process.env.PGUSER,
+    PGDATABASE: process.env.PGDATABASE,
+    PGPASSWORD: process.env.PGPASSWORD,
+    PGHOST: process.env.PGHOST,
+    PGPORT: process.env.PGPORT,
+});
 
 export const app = express();
 

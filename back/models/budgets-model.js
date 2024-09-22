@@ -1,9 +1,9 @@
 import { Model, DataTypes } from 'sequelize';
 import { client } from './client.js';
 
-export class Budget extends Model {}
+export class Budgets extends Model {}
 
-Budget.init({
+Budgets.init({
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,

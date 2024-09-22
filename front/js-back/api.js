@@ -21,6 +21,15 @@ const API = {
         }
     },
 
+    async login(data) {
+        return await API.fetchAPI('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+    }
 }
 
 export default API;

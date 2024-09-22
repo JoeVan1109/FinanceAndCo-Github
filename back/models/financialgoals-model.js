@@ -1,9 +1,9 @@
 import { Model, DataTypes } from 'sequelize';
 import { client } from './client.js';
 
-export class FinancialGoal extends Model {}
+export class FinancialGoals extends Model {}
 
-FinancialGoal.init({
+FinancialGoals.init({
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,

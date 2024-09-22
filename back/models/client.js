@@ -1,4 +1,5 @@
 import 'dotenv/config'; //require('dotenv').config()
+
 import { Sequelize } from 'sequelize'; // const { Sequelize } = require('sequelize');
 
 const { 
@@ -20,7 +21,7 @@ export const client = new Sequelize(`postgres://${user}:${password}@${host}:${po
 
 client.authenticate()
     .then(
-        () => console.log(`🚀 database ${database} connected`),
+        () => console.log(`🚀 database ${database} connected to http://localhost:${port}`),
         () => console.log(`❌ unable to connect to database ${database}`)
     );
 

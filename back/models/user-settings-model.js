@@ -1,9 +1,9 @@
 import { Model, DataTypes } from 'sequelize';
 import { client } from './client.js';
 
-export class UserSetting extends Model {}
+export class UserSettings extends Model {}
 
-UserSetting.init({
+UserSettings.init({
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,

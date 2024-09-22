@@ -1,9 +1,9 @@
 import { Model, DataTypes } from 'sequelize';
 import { client } from './client.js';
 
-export class Notification extends Model {}
+export class Notifications extends Model {}
 
-Notification.init({
+Notifications.init({
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,

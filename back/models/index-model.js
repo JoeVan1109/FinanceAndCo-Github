@@ -1,13 +1,13 @@
-import { Users } from './Users.js';
-import { Category } from './Category.js';
-import { Transaction } from './Transaction.js';
-import { Budget } from './Budget.js';
-import { FinancialGoal } from './FinancialGoal.js';
-import { Notification } from './Notification.js';
-import { UserSetting } from './UserSetting.js';
-import { Client } from './Client.js';
+import { Users } from './users-model.js';
+import { Categories } from './categories-model.js';
+import { Transactions } from './transactions-model.js';
+import { Budgets } from './budgets-model.js';
+import { FinancialGoals } from './financialgoals-model.js';
+import { Notifications } from './notifications-model.js';
+import { UserSettings } from './user-settings-model.js';
+import { client } from './client.js';
 
-Users.hasOne(UserSetting, { 
+Users.hasOne(UserSettings, { 
     as: 'user_setting',
     foreignKey: {
         name: 'user_id',
@@ -15,7 +15,7 @@ Users.hasOne(UserSetting, {
     },
 });
 
-UserSetting.belongsTo(Users, {
+UserSettings.belongsTo(Users, {
     as: 'user',
     foreignKey: {
         name: 'user_id',
@@ -23,7 +23,7 @@ UserSetting.belongsTo(Users, {
     },
 });
 
-Users.hasMany(Transaction, {
+Users.hasMany(Transactions, {
     as: 'transactions',
     foreignKey: {
         name: 'user_id',
@@ -31,7 +31,7 @@ Users.hasMany(Transaction, {
     },
 });
 
-Transaction.belongsTo(Users, {
+Transactions.belongsTo(Users, {
     as: 'user',
     foreignKey: {
         name: 'user_id',
@@ -39,7 +39,7 @@ Transaction.belongsTo(Users, {
     },
 });
 
-Users.hasMany(Budget, {
+Users.hasMany(Budgets, {
     as: 'budgets',
     foreignKey: {
         name: 'user_id',
@@ -47,7 +47,7 @@ Users.hasMany(Budget, {
     },
 });
 
-Budget.belongsTo(Users, {
+Budgets.belongsTo(Users, {
     as: 'user',
     foreignKey: {
         name: 'user_id',
@@ -55,7 +55,7 @@ Budget.belongsTo(Users, {
     },
 });
 
-Users.hasMany(FinancialGoal, {
+Users.hasMany(FinancialGoals, {
     as: 'financial_goals',
     foreignKey: {
         name: 'user_id',
@@ -63,7 +63,7 @@ Users.hasMany(FinancialGoal, {
     },
 });
 
-FinancialGoal.belongsTo(Users, {
+FinancialGoals.belongsTo(Users, {
     as: 'user',
     foreignKey: {
         name: 'user_id',
@@ -71,15 +71,15 @@ FinancialGoal.belongsTo(Users, {
     },
 });
 
-Users.hasMany(Notification, {
+Users.hasMany(Notifications, {
     as: 'notifications',
     foreignKey: {
         name: 'user_id',
         allowNull: false,
     },
-});: 
+});
 
-Notification.belongsTo(Users, {
+Notifications.belongsTo(Users, {
     as: 'user',
     foreignKey: {
         name: 'user_id',
@@ -87,7 +87,7 @@ Notification.belongsTo(Users, {
     },
 });
 
-Category.hasMany(Transaction, {
+Categories.hasMany(Transactions, {
     as: 'transactions',
     foreignKey: {
         name: 'category_id',
@@ -95,7 +95,7 @@ Category.hasMany(Transaction, {
     },
 });
 
-Transaction.belongsTo(Category, {
+Transactions.belongsTo(Categories, {
     as: 'category',
     foreignKey: {
         name: 'category_id',
@@ -103,7 +103,7 @@ Transaction.belongsTo(Category, {
     },
 });
 
-Category.hasMany(Budget, {
+Categories.hasMany(Budgets, {
     as: 'budgets',
     foreignKey: {
         name: 'category_id',
@@ -111,7 +111,7 @@ Category.hasMany(Budget, {
     },
 });
 
-Budget.belongsTo(Category, {
+Budgets.belongsTo(Categories, {
     as: 'category',
     foreignKey: {
         name: 'category_id',
@@ -122,11 +122,11 @@ Budget.belongsTo(Category, {
 
 export {
     Users,
-    Category,
-    Transaction,
-    Budget,
-    FinancialGoal,
-    Notification,
-    UserSetting,
-    Client,
+    Categories,
+    Transactions,
+    Budgets,
+    FinancialGoals,
+    Notifications,
+    UserSettings,
+    client,
 };

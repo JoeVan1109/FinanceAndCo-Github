@@ -8,7 +8,9 @@ Cela facilera plus tard les tests de notre application en nous permettant
 d'utiliser un serveur de test indépendant.
 */
 
-import 'dotenv/config';
+import dotenv from 'dotenv';
+dotenv.config(); // Charge les variables d'environnement
+
 import { createServer } from 'node:http';
 import { app } from './app/app.js';
 
@@ -19,4 +21,3 @@ const server = createServer(app);
 server.listen(PORT, () => {
   console.log(`🚀 Server ready at http://localhost:${PORT}`);
 });
-
