@@ -5,7 +5,7 @@ export default {
         try {
             const { email, password } = req.body;
             const user = await Users.findOne({ where: { email } });
-            if (user && user.password === password) { // Note: Utilisez un hachage de mot de passe en production
+            if (user && user.password === password) {
                 res.status(200).json({ message: 'La connexion est un succès' });
             } else {
                 res.status(401).json({ message: 'Email ou mot de passe incorrect' });

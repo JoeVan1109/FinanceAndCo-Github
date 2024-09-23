@@ -1,14 +1,18 @@
 {
 
-  "name": "finance-and-co",
-  
+ "name": "s13-okanban-spa",
   "version": "1.0.0",
-  
-  "description": "",
-  
   "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
   
   "scripts": {
+
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
   
   "test": "echo \"error:no test specified\" && exit 1",
 

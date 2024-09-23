@@ -1,34 +1,45 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.getElementById('loginForm');
-    loginForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        await fetchLogin();
-    });
-});
+import { APIBaseURL } from './config.js';
 
-async function fetchLogin() {
+export function initLoginForm() {
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', handleLogin);
+    }
+}
+
+async function handleLogin(event) {
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
     try {
-        const response = await fetch('http://localhost:3000/api/login', {
+        const response = await fetch(`${APIBaseURL}/login`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                email: document.getElementById('email').value,
-                password: document.getElementById('password').value
-            })
+            body: JSON.stringify({ email, password })
         });
 
-        const data = await response.json();
+        // Log de la réponse pour le débogage
+        console.log('Response status:', response.status);
+        console.log('Response headers:', response.headers);
 
-        if (response.ok) {
-            alert(data.message); // Affiche le message de succès
-            // Rediriger vers la page d'accueil
-            window.location.href = '../../../html/home.html';
-            alert(data.message); // Affiche le message d'erreur
+        if (!response.ok) {
+            const errorData = await response.json();
+            console.error('Error data:', errorData);
+            throw new Error(errorData.message || 'Erreur de connexion');
         }
+
+        const user = await response.json();
+        console.log('User data:', user);
+
+
+        // Redirection vers la page d'accueil ou le tableau de bord
+        window.location.href = '../html/home.html'; // Ajustez le chemin selon votre structure
+
     } catch (error) {
         console.error('Erreur lors de la connexion:', error);
-        alert('Une erreur est survenue lors de la connexion');
+        alert(error.message || 'Identifiants incorrects');
     }
 }
