@@ -1,3 +1,6 @@
 import { Router } from 'express';
-import { getHome } from '../controllers/homeController';
+import { homeController } from '../controllers/homeController.js';
 
+export const router = Router();
+
+router.get('/', homeController.getHome);

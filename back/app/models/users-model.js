@@ -1,30 +1,37 @@
+// users-model.js
 import { Model, DataTypes } from 'sequelize';
-import { client } from './client.js';
-
-
+import sequelize from '../sequelize.js';
 
 export class Users extends Model {}
 
 Users.init({
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
     username: {
-        type: DataTypes.TEXT,
-        allowNull: false,
+        type: DataTypes.STRING(50),
+        unique: true,
+        allowNull: false
     },
     password: {
-        type: DataTypes.TEXT,
-        allowNull: false,
+        type: DataTypes.STRING(255),
+        allowNull: false
     },
     email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            isEmail: true,  // Cela vérifie que c'est un format d'email valide
-        }
+        type: DataTypes.STRING(100),
+        unique: true,
+        allowNull: false
     },
-    }, {
-    sequelize: client,
-    modelName: 'Users',
+    createdAt: {
+        type: DataTypes.DATE,
+        field: 'created_at'
+    }
+}, {
+    sequelize,
     tableName: 'users',
-    timestamps: false, // Désactive createdAt et updatedAt
-
+    timestamps: false, // Désactivez complètement les timestamps
+    createdAt: 'created_at',
+    updatedAt: false // Il n'y a pas de colonne updated_at dans votre table
 });

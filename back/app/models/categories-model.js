@@ -1,23 +1,29 @@
+// categories-model.js
 import { Model, DataTypes } from 'sequelize';
-import { client } from './client.js';
-
-
+import sequelize from '../sequelize.js';
 
 export class Categories extends Model {}
 
 Categories.init({
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
     name: {
-        type: DataTypes.TEXT,
-        allowNull: false,
+        type: DataTypes.STRING(50),
+        allowNull: false
     },
     type: {
-        type: DataTypes.STRING(10),
-        allowNull: false,
-        validate: {
-            isIn: [['income', 'expense']]
-        }
+        type: DataTypes.ENUM('income', 'expense'),
+        allowNull: false
     },
-    }, {
-    sequelize: client,
-    tableName: 'users',
+    iconPath: {
+        type: DataTypes.STRING(255),
+        field: 'icon_path'
+    }
+}, {
+    sequelize,
+    tableName: 'categories',
+    timestamps: false
 });

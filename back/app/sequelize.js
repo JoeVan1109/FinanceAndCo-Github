@@ -1,13 +1,13 @@
 import 'dotenv/config';
 import { Sequelize } from 'sequelize';
 
-const client = new Sequelize(process.env.PG_URL);
+const sequelize = new Sequelize('financeandco', 'financeadmin', 'hondarae108', {
+    host: 'localhost',
+    dialect: 'postgres',
+    define: {
+        timestamps: false, // Désactivez les timestamps par défaut pour tous les modèles
+        underscored: true
+    }
+});
 
-try {
-    await client.authenticate();
-    console.log(`🚀 database connected`);
-} catch (error) {
-    console.error(`❌ unable to connect to database: ${error.message}`);
-}
-
-export default client;
+export default sequelize;

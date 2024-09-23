@@ -1,5 +1,6 @@
+// notifications-model.js
 import { Model, DataTypes } from 'sequelize';
-import { client } from './client.js';
+import sequelize from '../sequelize.js';
 
 export class Notifications extends Model {}
 
@@ -9,9 +10,9 @@ Notifications.init({
         primaryKey: true,
         autoIncrement: true
     },
-    user_id: {
+    userId: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        field: 'user_id',
         references: {
             model: 'users',
             key: 'id'
@@ -21,16 +22,19 @@ Notifications.init({
         type: DataTypes.TEXT,
         allowNull: false
     },
-    is_read: {
+    isRead: {
         type: DataTypes.BOOLEAN,
+        field: 'is_read',
         defaultValue: false
     },
-    created_at: {
+    createdAt: {
         type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW
+        field: 'created_at'
     }
 }, {
-    sequelize: client,
+    sequelize,
     tableName: 'notifications',
-    timestamps: false
+    timestamps: true,
+    createdAt: 'created_at',
+    updatedAt: false // Il n'y a pas de colonne updated_at dans votre table
 });

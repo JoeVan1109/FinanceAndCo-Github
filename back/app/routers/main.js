@@ -3,6 +3,9 @@ import { Router } from 'express';
 import { HttpError } from '../error/httperror.js';
 
 // importer les différents routeurs
+import { router as loginRouter } from './login.js';
+import { router as userRouter } from './users.js';
+import { router as homeRouter } from './home.js';
 
 
 const router = Router();
@@ -12,9 +15,15 @@ router.get('/', (req, res) => {
     res.send('Welcome to my awesome Finance And Co API!');
 });
 
-// Ajout des routeurs de l'API
-// - routeur pour les Pokémon
+// route API vers users
+router.use('/users',userRouter);
 
+// route API vers login
+router.use('/login', loginRouter);
+
+
+// route API vers home
+router.use('/home', homeRouter);
 
 // erreur 404
 router.use((req, res, next) => {

@@ -1,11 +1,11 @@
+import { FinancialGoals } from './financialgoals-model.js';
+import { Notifications } from './notifications-model.js';
+import { UserSettings } from './user-settings-model.js';
 import { Users } from './users-model.js';
 import { Categories } from './categories-model.js';
 import { Transactions } from './transactions-model.js';
 import { Budgets } from './budgets-model.js';
-import { FinancialGoals } from './financialgoals-model.js';
-import { Notifications } from './notifications-model.js';
-import { UserSettings } from './user-settings-model.js';
-import { client } from './client.js';
+
 
 Users.hasOne(UserSettings, { 
     as: 'user_setting',
@@ -29,6 +29,7 @@ Users.hasMany(Transactions, {
         name: 'user_id',
         allowNull: false,
     },
+    onDelete: 'CASCADE',
 });
 
 Transactions.belongsTo(Users, {
@@ -128,5 +129,4 @@ export {
     FinancialGoals,
     Notifications,
     UserSettings,
-    client,
 };

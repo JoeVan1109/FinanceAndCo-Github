@@ -1,5 +1,6 @@
+// user-settings-model.js
 import { Model, DataTypes } from 'sequelize';
-import { client } from './client.js';
+import sequelize from '../sequelize.js';
 
 export class UserSettings extends Model {}
 
@@ -9,9 +10,9 @@ UserSettings.init({
         primaryKey: true,
         autoIncrement: true
     },
-    user_id: {
+    settingId: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        field: 'setting_id',
         unique: true,
         references: {
             model: 'users',
@@ -31,7 +32,7 @@ UserSettings.init({
         defaultValue: 'en-US'
     }
 }, {
-    sequelize: client,
+    sequelize,
     tableName: 'user_settings',
     timestamps: false
 });

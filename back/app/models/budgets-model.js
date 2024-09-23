@@ -1,5 +1,6 @@
+// budgets-model.js
 import { Model, DataTypes } from 'sequelize';
-import { client } from './client.js';
+import sequelize from '../sequelize.js';
 
 export class Budgets extends Model {}
 
@@ -9,17 +10,17 @@ Budgets.init({
         primaryKey: true,
         autoIncrement: true
     },
-    user_id: {
+    userId: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        field: 'user_id',
         references: {
             model: 'users',
             key: 'id'
         }
     },
-    category_id: {
+    categoryId: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        field: 'category_id',
         references: {
             model: 'categories',
             key: 'id'
@@ -29,20 +30,24 @@ Budgets.init({
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false
     },
-    start_date: {
-        type: DataTypes.DATE,
+    startDate: {
+        type: DataTypes.DATEONLY,
+        field: 'start_date',
         allowNull: false
     },
-    end_date: {
-        type: DataTypes.DATE,
+    endDate: {
+        type: DataTypes.DATEONLY,
+        field: 'end_date',
         allowNull: false
     },
-    created_at: {
+    createdAt: {
         type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW
+        field: 'created_at'
     }
 }, {
-    sequelize: client,
+    sequelize,
     tableName: 'budgets',
-    timestamps: false
+    timestamps: true,
+    createdAt: 'created_at',
+    updatedAt: false // Il n'y a pas de colonne updated_at dans votre table
 });
