@@ -11,8 +11,9 @@
   "scripts": {
   
   "test": "echo \"error:no test specified\" && exit 1",
+
+  "sass": "sass --watch ../front/assets/sass/main.scss:../front/assets/css/style.css"
   
-  "sass": "sass --watch ./sass/main.scss:./front/assets/css/style.css"
   
   }
   
