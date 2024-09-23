@@ -34,6 +34,10 @@ async function handleLogin(event) {
         const user = await response.json();
         console.log('User data:', user);
 
+        // Stockez l'ID de l'utilisateur dans le localStorage
+        localStorage.setItem('userId', userData.id);
+        localStorage.setItem('userToken', userData.token); // Si vous utilisez un token
+
 
         // Redirection vers la page d'accueil ou le tableau de bord
         window.location.href = '../html/home.html'; // Ajustez le chemin selon votre structure

@@ -3,7 +3,7 @@ import { Users, Categories, Transactions, Budgets, FinancialGoals, Notifications
 export const homeController = {
     getHome: async (req, res) => {
         const users = await Users.findAll({
-            attributes: ['id', 'username', 'email', 'createdAt']
+            attributes: ['id', 'username', 'email']
         });
         const categories = await Categories.findAll({
             attributes: ['id', 'name', 'type']

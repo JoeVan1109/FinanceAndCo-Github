@@ -16,7 +16,8 @@ export default [
         },
         rules: {
         semi: 'error',
-        '@stylistic/indent': ['error', 2],
+        "indent": "off",
+        '@stylistic/indent': "['error', 2]",
         '@stylistic/quotes': ['error', 'single'],
         '@stylistic/block-spacing': 'error',
         '@stylistic/comma-dangle': ['error', { objects: 'always-multiline' }],

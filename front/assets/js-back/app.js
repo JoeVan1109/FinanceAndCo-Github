@@ -1,4 +1,5 @@
 import { initLoginForm } from './login.js';
+import { initHomePage } from './home.js';
 // import { initDashboard } from './dashboard.js';
 // import { initTransactions } from './transactions.js';
 // import { initBudgets } from './budgets.js';
@@ -10,6 +11,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         await initLoginForm();
         console.log('Formulaire de connexion initialisé');
+
+        await initHomePage();
+        console.log('Page d\'accueil initialisée');
         
         // // Ces initialisations ne devraient être appelées que si l'utilisateur est connecté
         // if (isUserLoggedIn()) {
